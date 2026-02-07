@@ -37,11 +37,13 @@ This is the first stable release of the Hybrid Last-Mile Logistics Simulation fr
 - Per-vehicle performance analysis
 
 ✅ **Publication-Ready Visualizations**
+- **Conceptual Model Diagram:** System architecture showing DES+ABM integration
 - Scenario comparison charts (4-panel bar plots)
 - Delivery time distributions (histograms with statistical overlays)
 - Vehicle utilization analysis (bar charts with mean lines)
 - 300 DPI PNG outputs for academic publications
 - Automated CSV export for table generation
+- Mermaid flowchart in documentation
 
 ✅ **Extensive Documentation**
 - GitHub-optimized README with badges and quick start
