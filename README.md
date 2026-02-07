@@ -183,7 +183,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-**Kevin Kibochi**  
+**Kevin Kibebe**  
 GitHub: [@kevykibbz](https://github.com/kevykibbz)  
 Repository: [hybrid-lastmile-logistics-simulation](https://github.com/kevykibbz/hybrid-lastmile-logistics-simulation)
 
@@ -211,8 +211,8 @@ For questions or collaboration:
 If you use this simulation in academic work, please cite:
 
 ```bibtex
-@software{kibochi2026hybrid,
-  author = {Kibochi, Kevin},
+@software{kibebe2026hybrid,
+  author = {Kibebe, Kevin},
   title = {Hybrid Last-Mile Logistics Simulation: DES + ABM},
   year = {2026},
   url = {https://github.com/kevykibbz/hybrid-lastmile-logistics-simulation}
