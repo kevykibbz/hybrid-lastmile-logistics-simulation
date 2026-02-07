@@ -76,6 +76,14 @@ def main():
     print(" VISUALIZATION GENERATION ".center(80, " "))
     print("█"*80 + "\n")
     
+    # Generate conceptual model diagram
+    print("Generating conceptual model diagram...")
+    try:
+        from create_conceptual_diagram import create_conceptual_diagram
+        create_conceptual_diagram()
+    except Exception as e:
+        print(f"⚠ Could not generate conceptual diagram: {e}")
+    
     generate_all_plots(
         'outputs/normal_day_results.json',
         'outputs/peak_day_results.json',

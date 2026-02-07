@@ -86,18 +86,34 @@ hybrid_simulation/
 
 ---
 
+## � System Architecture
+
+### Conceptual Model
+![Conceptual Model](outputs/plots/conceptual_model_diagram.png)
+
+The simulation integrates **Discrete Event Simulation** (time-driven events) with **Agent-Based Modeling** (autonomous vehicle agents) to create a realistic urban logistics system.
+
+---
+
 ## 📈 Visualizations
 
-The simulation generates three publication-ready plots:
+The simulation generates four publication-ready plots:
 
-### 1. Scenario Comparison
+### 1. Conceptual Model Diagram
+![Conceptual Model](outputs/plots/conceptual_model_diagram.png)
+*System architecture showing DES+ABM integration*
+
+### 2. Scenario Comparison
 ![Scenario Comparison](outputs/plots/scenario_comparison.png)
+*Performance metrics across normal and peak demand*
 
-### 2. Delivery Time Distribution
+### 3. Delivery Time Distribution
 ![Delivery Time Distribution](outputs/plots/delivery_time_distribution.png)
+*Statistical distribution of delivery times*
 
-### 3. Vehicle Utilization
+### 4. Vehicle Utilization
 ![Vehicle Utilization](outputs/plots/vehicle_utilization.png)
+*Individual agent performance and workload balance*
 
 ---
 

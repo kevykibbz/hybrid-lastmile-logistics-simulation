@@ -14,6 +14,71 @@ This project implements a **hybrid Discrete Event Simulation (DES) + Agent-Based
 
 ---
 
+## Conceptual Model Architecture
+
+The simulation follows a **hybrid architecture** that integrates Discrete Event Simulation (DES) with Agent-Based Modeling (ABM):
+
+```mermaid
+flowchart TB
+    subgraph DES["🕒 DISCRETE EVENT SIMULATION (SimPy)"]
+        A[Stochastic Order Generation<br/>Poisson Process λ=2.0-4.0/min]
+        B[Time Progression<br/>Event Scheduling]
+        C[Hub Queueing<br/>Management]
+        D[Metrics Collection<br/>Performance Tracking]
+    end
+    
+    subgraph ABM["🤖 AGENT-BASED MODELING"]
+        E[Vehicle Agents x6<br/>Individual State]
+        F[Capacity Limits<br/>5 orders/vehicle]
+        G[Autonomous Decision<br/>Pick/Deliver Logic]
+        H[Emergent Behavior<br/>Workload Imbalance]
+    end
+    
+    subgraph HYBRID["⚡ HYBRID INTEGRATION"]
+        I[DES schedules events<br/>ABM agents respond]
+    end
+    
+    subgraph NETWORK["🌐 PHYSICAL NETWORK"]
+        J[Warehouse W1]
+        K[Micro-Hubs H1, H2]
+        L[Customers C1-C15]
+        M[Fleet: 6 Cargo Bikes]
+    end
+    
+    A --> I
+    B --> I
+    C --> I
+    E --> I
+    F --> I
+    G --> I
+    I --> NETWORK
+    I --> D
+    I --> H
+    
+    J --> K
+    K --> L
+    M --> K
+    
+    style DES fill:#E8F4F8,stroke:#2E86AB,stroke-width:3px
+    style ABM fill:#F9E8F2,stroke:#A23B72,stroke-width:3px
+    style HYBRID fill:#FFF4E6,stroke:#F18F01,stroke-width:4px
+    style NETWORK fill:#F2F7EE,stroke:#6A994E,stroke-width:3px
+```
+
+**Visual Diagram:** See [conceptual_model_diagram.png](outputs/plots/conceptual_model_diagram.png) for detailed architecture visualization.
+
+### How DES and ABM Interact
+
+| Component | DES Role | ABM Role | Integration Point |
+|-----------|----------|----------|-------------------|
+| **Order Arrivals** | Generates events via Poisson process | - | Orders enter system |
+| **Vehicle Dispatch** | Schedules availability checks | Agents decide to accept orders | Vehicle state transition |
+| **Travel Time** | Advances simulation clock | Agents track their position | Event completion |
+| **Delivery** | Records metrics, frees vehicle | Agent updates internal state | Metrics collection |
+| **Queue Management** | Maintains hub queues | Agents query queue status | Decision-making input |
+
+---
+
 ## Project Structure
 
 ```
